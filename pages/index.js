@@ -6,6 +6,7 @@ import Link from 'next/link'
 export default function Home() {
   const [fname, setFname] = useState('')
   const [lname, setLname] = useState('')
+  const [email, setEmail] = useState('')
   const [gender, setGender] = useState('')
   const [regno, setRegno] = useState('')
   const [branch, setBranch] = useState('')
@@ -26,6 +27,7 @@ export default function Home() {
     console.log(
       "First Name:", fname,
       "Last Name:", lname,
+      "Email:", email,
       "Gender:", gender,
       "Registration Number:", regno,
       "Branch:", branch,
@@ -62,6 +64,12 @@ export default function Home() {
                     <input type="text" placeholder='' name='Jain' onFocus={showPlaceholder} onBlur={hidePlaceholder} onChange={(e) => setLname(e.target.value)} value={lname} />
                     <label>
                       <span style={{ transitionDelay: "0ms" }}>L</span><span style={{ transitionDelay: "50ms" }}>a</span><span style={{ transitionDelay: "100ms" }}>s</span><span style={{ transitionDelay: "150ms" }}>t</span><span style={{ transitionDelay: "200ms" }}>&nbsp;</span><span style={{ transitionDelay: "250ms" }}>N</span><span style={{ transitionDelay: "300ms" }}>a</span><span style={{ transitionDelay: "350ms" }}>m</span><span style={{ transitionDelay: "400ms" }}>e</span>
+                    </label>
+                  </div>
+                  <div className="form-control mb-8">
+                    <input type="email" placeholder='' name='sr3693@srmist.edu.in' onFocus={showPlaceholder} onBlur={hidePlaceholder} onChange={(e) => setEmail(e.target.value)} value={email} />
+                    <label>
+                      <span style={{ transitionDelay: "0ms" }}>S</span><span style={{ transitionDelay: "30ms" }}>R</span><span style={{ transitionDelay: "60ms" }}>M</span><span style={{ transitionDelay: "90ms" }}>I</span><span style={{ transitionDelay: "120ms" }}>S</span><span style={{ transitionDelay: "150ms" }}>T</span><span style={{ transitionDelay: "180ms" }}>&nbsp;</span><span style={{ transitionDelay: "210ms" }}>E</span><span style={{ transitionDelay: "240ms" }}>m</span><span style={{ transitionDelay: "270ms" }}>a</span><span style={{ transitionDelay: "300ms" }}>i</span><span style={{ transitionDelay: "330ms" }}>l</span>
                     </label>
                   </div>
                   <div className="form-control mb-8" onChange={(e) => setGender(e.target.value)} value={gender}>
@@ -107,7 +115,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='flex md:justify-start justify-center'>
-                  <Link href={{ pathname: '/result', query: { fname: fname, lname: lname, gender: gender, regno: regno, branch: branch, number: number, linkedin: linkedin, github: github } }}><a><button type="submit" onSubmit={handleSubmit} className="inline-block px-10 py-3 bg-red-500 text-white font-medium text-sm leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Submit</button></a></Link>
+                  <Link href={{ pathname: '/result', query: { fname: fname, lname: lname, email: email, gender: gender, regno: regno, branch: branch, number: number, linkedin: linkedin, github: github } }}><a><button type="submit" onSubmit={handleSubmit} className="inline-block px-10 py-3 bg-red-500 text-white font-medium text-sm leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Submit</button></a></Link>
                 </div>
               </form>
             </div>

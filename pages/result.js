@@ -20,6 +20,7 @@ const Result = () => {
                                 <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                                     <h5>First Name: <span className='text-amber-500'>{query.fname}</span></h5>
                                     <h5>Last Name: <span className='text-amber-500'>{query.lname}</span></h5>
+                                    <h5>Email: <span className='text-amber-500'>{query.email}</span></h5>
                                     <h5>Gender: <span className='text-amber-500'>{query.gender}</span></h5>
                                     <h5>Registration Number: <span className='text-amber-500'>{query.regno}</span></h5>
                                     <h5>Branch: <span className='text-amber-500'>{query.branch}</span></h5>
