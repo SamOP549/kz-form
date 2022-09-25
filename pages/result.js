@@ -4,6 +4,17 @@ import { useRouter } from 'next/router'
 const Result = () => {
     const router = useRouter();
     const query = router.query;
+    console.log(
+        "First Name:", query.fname,
+        "Last Name:", query.lname,
+        "Email:", query.email,
+        "Gender:", query.gender,
+        "Registration Number:", query.regno,
+        "Branch:", query.branch,
+        "Number:", query.number,
+        "LinkedIn:", query.linkedin,
+        "Github:", query.github,
+      )
     return (
         <div>
             <div className="min-h-screen bg-gradient-to-br to-gray-800 from-blue-800 py-6 flex flex-col justify-center sm:py-12">

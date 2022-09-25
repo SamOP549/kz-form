@@ -24,17 +24,6 @@ export default function Home() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(
-      "First Name:", fname,
-      "Last Name:", lname,
-      "Email:", email,
-      "Gender:", gender,
-      "Registration Number:", regno,
-      "Branch:", branch,
-      "Number:", number,
-      "LinkedIn:", linkedin,
-      "Github:", github,
-    )
   }
   return (
     <div>
